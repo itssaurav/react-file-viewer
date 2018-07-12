@@ -71,10 +71,11 @@ class FileViewer extends Component {
   }
 
   render() {
+    const Driver = this.getDriver(this.props);
     return (
       <div className="pg-viewer-wrapper">
         <div className="pg-viewer" id="pg-viewer">
-
+          <Driver {...this.props} width={this.state.width} height={this.state.height} />
         </div>
       </div>
     );
